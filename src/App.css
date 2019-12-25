@@ -1,28 +1,28 @@
 .header-color {
-  background: #ff5f6d; /* fallback for old browsers */
+  background: #348f50; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
-    #ffc371,
-    #ff5f6d
+    #56b4d3,
+    #348f50
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to left,
-    #ffc371,
-    #ff5f6d
+    #56b4d3,
+    #348f50
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .landing-grid {
-  background: #ff5f6d; /* fallback for old browsers */
+  background: #1f1c2c; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to left,
-    #ffc371,
-    #ff5f6d
+    to right,
+    #928dab,
+    white
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to left,
-    #ffc371,
-    #ff5f6d
+    to right,
+    antiquewhite,
+    white
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   opacity: 0.9;
@@ -118,4 +118,25 @@ img {
 .contact-list i {
   font-size: 66px;
   padding-right: 5rem;
+}
+
+/* resume css */
+.resume-right-col {
+  background-color: black;
+  padding: 2em;
+  margin: auto;
+}
+.resume-right-col h2 {
+  color: aliceblue;
+}
+.education {
+  color: white;
+}
+
+.experience {
+  color: white;
+}
+
+.skills {
+  color: white;
 }
