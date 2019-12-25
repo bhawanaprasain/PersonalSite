@@ -9,7 +9,7 @@ class Resume extends Component {
           <Cell col={6}>
             <h2>Bhawana Prasain</h2>
             <img src="./bhawana.jpg" alt="avatar" />
-            <p style={{ width: "75%", margin: "auto", paddingTop: "1em" }}>
+            <p style={{ width: "75%", margin: "auto", paddingTop: "3em" }}>
               I spend more time in debugging my own code rather than writing
               code. Travelling to new places always makes me happy.I want to
               live with no excuses and travel with no regrets.

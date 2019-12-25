@@ -1,14 +1,14 @@
 .header-color {
   background: #348f50; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to left,
-    #56b4d3,
-    #348f50
+    to right,
+    black,
+    #43464b
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to left,
-    #56b4d3,
-    #348f50
+    to right,
+    black,
+    #43464b
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -35,6 +35,7 @@
 img {
   height: 250px;
   padding-top: 5em;
+  border-radius: 50%;
 }
 
 .banner-text {
@@ -77,6 +78,7 @@ img {
 
 .projects-grid {
   display: flex;
+  margin-top: 250px;
 }
 .contact-body {
   margin: auto;
@@ -126,10 +128,29 @@ img {
   padding: 2em;
   margin: auto;
 }
+
 .resume-right-col h2 {
   color: aliceblue;
 }
+.contact-details h3,
+h4 {
+  color: green;
+}
+.contact-details p {
+  color: black;
+  font-size: 16px;
+}
+.card {
+  margin-top: 100px;
+}
+.personaldetails {
+  text-align: center;
+}
+
 .education {
+  color: white;
+}
+.education h4 {
   color: white;
 }
 
@@ -137,6 +158,20 @@ img {
   color: white;
 }
 
+.experience h4 {
+  color: white;
+}
+
 .skills {
   color: white;
+}
+/*about */
+.about {
+  margin-top: 200px;
+}
+.about p {
+  color: black;
+  margin-top: 110px;
+  text-align: center;
+  font-size: 18px;
 }

@@ -1,5 +1,15 @@
 import React, { Component } from "react";
-import { Grid, Cell } from "react-mdl";
+import {
+  Grid,
+  Cell,
+  Card,
+  CardTitle,
+  CardText,
+  CardActions,
+  Button,
+  CardMenu,
+  IconButton
+} from "react-mdl";
 import Education from "./education";
 import Experience from "./experience";
 import Skills from "./skills";
@@ -9,40 +19,47 @@ class Resume extends Component {
     return (
       <div>
         <Grid>
-          <Cell col={4}>
-            <div style={{ textAlign: "center" }}>
-              <img
-                src="./bhawana.jpg"
-                alt="avatar"
-                style={{ height: "200px" }}
-              />
-            </div>
-            <div>
-              <h2 style={{ paddingTop: "2em" }}>Bhawana Prasain</h2>
-              <h4 style={{ color: "grey" }}>Programmer</h4>
-              <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
-              <p>
-                Computer code might look like a foreign language, but it is a
-                language anybody can pick up quickly, with a little practice!
-                Learn more about coding with DK’s Computer Coding, and on
-                DKfindout!
-              </p>
-              <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
-              <h5>Address</h5>
-              <p>Deep, Pokhara</p>
-              <h5>Phone</h5>
-              <p>1234567890</p>
-              <h5>Email</h5>
-              <p>bhawana.prs@gmail.com</p>
+          <Cell col={3}>
+            <div className="personaldetails">
+              <div style={{ textAlign: "center" }}>
+                <img
+                  src="./bhawana.jpg"
+                  alt="avatar"
+                  style={{ height: "200px" }}
+                />
+              </div>
+              <div>
+                <h2 style={{ paddingTop: "2em", color: "green" }}>
+                  Bhawana Prasain
+                </h2>
+                <h3 style={{ color: "black" }}>Traveller</h3>
+                <hr style={{ borderTop: "3px solid green", width: "100%" }} />
 
-              <h5>Website</h5>
-              <hr style={{ borderTop: "3px solid #833fb2", width: "50%" }} />
+                <div className="card">
+                  <Card
+                    shadow={0}
+                    style={{
+                      width: "512px",
+                      margin: "auto"
+                    }}
+                  >
+                    <CardText className="contact-details">
+                      <h3>Contact Details</h3>
+                      <hr style={{ borderTop: "3px solid green" }} />
 
-              <p>mywebsite.com</p>
+                      <h4>Address</h4>
+                      <p>Deep, Pokhara</p>
+                      <h4>Email</h4>
+                      <p>bhawana.prs@gmail.com</p>
+                    </CardText>
+                  </Card>
+                </div>
+              </div>
             </div>
           </Cell>
 
-          <Cell className="resume-right-col" col={8}>
+          <Cell col={1}></Cell>
+          <Cell className="resume-right-col" col={7}>
             <h2>Education</h2>
             <Education
               startYear={2008}

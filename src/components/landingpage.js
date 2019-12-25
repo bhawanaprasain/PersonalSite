@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Cell } from "react-mdl";
+// import { StyleSheet, View, Image, Text } from 'react-native';
 
 function LandingPage() {
   return (
