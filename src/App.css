@@ -75,3 +75,7 @@ img {
   font-size: 5em;
   padding: 20px;
 }
+
+.projects-grid {
+  display: flex;
+}
