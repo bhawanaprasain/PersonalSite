@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { useSpring, animated } from "react-spring";
+
 import {
   Grid,
   Cell,
@@ -14,52 +16,57 @@ import Education from "./education";
 import Experience from "./experience";
 import Skills from "./skills";
 
-class Resume extends Component {
-  render() {
-    return (
-      <div>
-        <Grid>
-          <Cell col={3}>
-            <div className="personaldetails">
-              <div style={{ textAlign: "center" }}>
-                <img
-                  src="./bhawana.jpg"
-                  alt="avatar"
-                  style={{ height: "200px" }}
-                />
-              </div>
-              <div>
-                <h2 style={{ paddingTop: "2em", color: "green" }}>
-                  Bhawana Prasain
-                </h2>
-                <h3 style={{ color: "black" }}>Traveller</h3>
-                <hr style={{ borderTop: "3px solid green", width: "100%" }} />
+const Resume = () => {
+  const Animation = useSpring({
+    from: { opacity: 0, marginTop: -500 },
+    to: { opacity: 1, marginTop: 80 },
+    config: { duration: 500 }
+  });
+  return (
+    <div>
+      <Grid>
+        <Cell col={3}>
+          <div className="personaldetails">
+            <div style={{ textAlign: "center" }}>
+              <img
+                src="./bhawana.jpg"
+                alt="avatar"
+                style={{ height: "200px" }}
+              />
+            </div>
+            <div>
+              <h2 style={{ paddingTop: "2em", color: "green" }}>
+                Bhawana Prasain
+              </h2>
+              <h3 style={{ color: "black" }}>Traveller</h3>
+              <hr style={{ borderTop: "3px solid green", width: "100%" }} />
 
-                <div className="card">
-                  <Card
-                    shadow={0}
-                    style={{
-                      width: "512px",
-                      margin: "auto"
-                    }}
-                  >
-                    <CardText className="contact-details">
-                      <h3>Contact Details</h3>
-                      <hr style={{ borderTop: "3px solid green" }} />
+              <div className="card">
+                <Card
+                  shadow={0}
+                  style={{
+                    width: "512px",
+                    margin: "auto"
+                  }}
+                >
+                  <CardText className="contact-details">
+                    <h3>Contact Details</h3>
+                    <hr style={{ borderTop: "3px solid green" }} />
 
-                      <h4>Address</h4>
-                      <p>Deep, Pokhara</p>
-                      <h4>Email</h4>
-                      <p>bhawana.prs@gmail.com</p>
-                    </CardText>
-                  </Card>
-                </div>
+                    <h4>Address</h4>
+                    <p>Deep, Pokhara</p>
+                    <h4>Email</h4>
+                    <p>bhawana.prs@gmail.com</p>
+                  </CardText>
+                </Card>
               </div>
             </div>
-          </Cell>
+          </div>
+        </Cell>
 
-          <Cell col={1}></Cell>
-          <Cell className="resume-right-col" col={7}>
+        <Cell col={1}></Cell>
+        <Cell style={Animation} className="resume-right-col" col={7}>
+          <animated.div style={Animation}>
             <h2>Education</h2>
             <Education
               startYear={2008}
@@ -95,11 +102,11 @@ class Resume extends Component {
             <Skills skill="HTML/CSS" progress={50} buffer={67} />
 
             <Skills skill="Python" progress={40} buffer={60} />
-          </Cell>
-        </Grid>
-      </div>
-    );
-  }
-}
+          </animated.div>
+        </Cell>
+      </Grid>
+    </div>
+  );
+};
 
 export default Resume;
