@@ -12,7 +12,7 @@ class Resume extends Component {
             <p style={{ width: "75%", margin: "auto", paddingTop: "3em" }}>
               I spend more time in debugging my own code rather than writing
               code. Travelling to new places always makes me happy.I want to
-              live with no excuses and travel with no regrets.
+              live life with no excuses and travel with no regrets.
             </p>
           </Cell>
           <Cell col={6}>
